@@ -1,7 +1,6 @@
 import Layout from "../../containers/layout/Layout";
 import Sidebar from "./Sidebar";
 import Carousel from "./Carousel";
-import { useEffect } from "react";
 
 const Index = () => {
   return (

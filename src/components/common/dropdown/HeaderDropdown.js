@@ -1,4 +1,4 @@
-import { useReducer, useState, useEffect, useLayoutEffect } from "react";
+import { useReducer, useState, useLayoutEffect } from "react";
 import NavIcon from "../../../assets/icon/nav.svg";
 import Item1 from "./Item1";
 import Item2 from "./Item2";

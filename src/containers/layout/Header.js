@@ -48,7 +48,7 @@ const Header = ({ showLine }) => {
           </ul>
         </div>
 
-        {path == '/' ? <div className="border-t-2 border-blue-1 visible lg:invisible"></div> : <></>}
+        {path === '/' ? <div className="border-t-2 border-blue-1 visible lg:invisible"></div> : <></>}
 
         <div></div>
       </div>

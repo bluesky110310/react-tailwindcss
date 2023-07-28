@@ -8,7 +8,10 @@ const Header = ({ showLine }) => {
 
   return (
     <div id="header" className="w-full block lg:flex bg-white fixed z-10">
-      <div id="logo" className="w-full lg:w-[35%] flex items-center pt-5 lg:pt-0 shrink-0">
+      <div
+        id="logo"
+        className="w-full lg:w-[44vw] flex items-center pt-5 lg:pt-0 shrink-0"
+      >
         <DropwDown showLine={showLine} />
         <div className="lg:ml-14 flex items-center cursor-pointer">
           <Link to="/" className="flex items-center">
@@ -48,7 +51,11 @@ const Header = ({ showLine }) => {
           </ul>
         </div>
 
-        {path === '/' ? <div className="border-t-2 border-blue-1 visible lg:invisible"></div> : <></>}
+        {path === "/" ? (
+          <div className="border-t-2 border-blue-1 visible lg:invisible"></div>
+        ) : (
+          <></>
+        )}
 
         <div></div>
       </div>

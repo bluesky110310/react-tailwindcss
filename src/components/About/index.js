@@ -58,7 +58,11 @@ const Index = () => {
           die von ihnen benötigten Beratungsdienste effizient auslagern.
         </div>
         <div className="lg:w-6/12">
-          <img src={Image5} alt="default" className="w-full h-full object-fit" />
+          <img
+            src={Image5}
+            alt="default"
+            className="w-full h-full object-fit"
+          />
         </div>
       </div>
       <div className="w-full lg:flex lg:justify-between lg:px-[200px] py-5 lg:py-36">

@@ -6,9 +6,9 @@ const Item1 = () => {
       <img
         src={Image}
         alt="footer"
-        className="object-cover rounded-tl-[70px] rounded-br-[70px] h-[390px] lg:h-[430px]"
+        className="object-cover rounded-tl-[70px] rounded-br-[70px] w-full h-[390px] lg:h-[430px]"
       />
-      <div className="rounded-tl-[70px] rounded-br-[70px] bg-gradient-to-b from-blue-2 to-green-1 absolute w-full h-full top-0 text-white text-xs flex flex-col px-14 pt-[40px]">
+      <div className="rounded-tl-[70px] rounded-br-[70px] bg-gradient-to-b from-blue-2 to-green-1 absolute w-full h-full top-0 text-white text-xs flex flex-col px-14 pt-[100px]">
         <p className="py-4 text-base font-['Poppins'] font-bold">
           MEDIZINISCHE BERATUNG
         </p>
@@ -21,9 +21,7 @@ const Item1 = () => {
         <p className="py-[2px] text-xs font-semibold leading-6">
           Klärung zur OP bzw. Medikamenten
         </p>
-        <p className="py-[2px] text-xs font-semibold leading-6">
-          Behandlungen
-        </p>
+        <p className="py-[2px] text-xs font-semibold leading-6">Behandlungen</p>
         <p className="py-[2px] text-xs font-semibold leading-6">
           kompetente Facharztempfehlung für zweite Meinung
         </p>

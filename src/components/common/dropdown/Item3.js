@@ -8,7 +8,7 @@ const Item3 = () => {
         alt="footer"
         className="object-cover rounded-tl-[70px] rounded-br-[70px] h-[390px] lg:h-[430px]"
       />
-      <div className="rounded-tl-[70px] rounded-br-[70px] bg-gradient-to-b from-blue-2 to-green-1 absolute w-full h-full top-0 text-white text-xs flex flex-col px-14 pt-[30px]">
+      <div className="rounded-tl-[70px] rounded-br-[70px] bg-gradient-to-b from-blue-2 to-green-1 absolute w-full h-full top-0 text-white text-xs flex flex-col px-14 pt-[100px]">
         <p className="py-4 text-base font-['Poppins'] font-bold">VERWALTUNG</p>
         <p className="py-[2px] text-xs font-semibold leading-6">
           Unterlagenbearbeitung

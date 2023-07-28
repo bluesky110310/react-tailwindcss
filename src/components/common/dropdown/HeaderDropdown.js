@@ -15,7 +15,7 @@ const menus = [
 const HeaderDropdown = (props) => {
   const [open, setOpen] = useReducer((state) => !state, false);
   const [menu, setMenu] = useState(-1);
-  const [footerHeight, setFooterHeight] = useState(0)
+  const [footerHeight, setFooterHeight] = useState(0);
   const handleClickMenu = (index) => {
     setMenu(index);
   };
@@ -33,42 +33,41 @@ const HeaderDropdown = (props) => {
         return <></>;
     }
   };
-  
 
   useLayoutEffect(() => {
     setTimeout(() => {
       const language_setting = document.getElementById("language_setting");
       if (language_setting) {
-        setFooterHeight(language_setting.offsetTop - window.scrollY)
+        setFooterHeight(language_setting.offsetTop - window.scrollY);
       }
-    }, 200)
+    }, 200);
     window.addEventListener("scroll", () => {
       const language_setting = document.getElementById("language_setting");
       if (language_setting) {
-        setFooterHeight(language_setting.offsetTop - window.scrollY)
+        setFooterHeight(language_setting.offsetTop - window.scrollY);
       }
-    })
+    });
   }, []);
 
   return (
     <div className="relative">
-    {
-      props.showLine && !open && <div className="invisible lg:visible">
-        <div
-          className="fixed border-l-2 border-blue-1 top-0 left-[105px] z-20"
-          style={{
-            height: footerHeight - 20
-          }}
-        />
-        <div
-          className="fixed border-l-2 border-blue-1 left-[145px] z-20"
-          style={{
-            height: window.visualViewport.height - footerHeight - 40,
-            top: footerHeight + 40
-          }}
-        />
-      </div>
-    }
+      {props.showLine && !open && (
+        <div className="invisible lg:visible">
+          <div
+            className="fixed border-l-2 border-blue-1 top-0 left-[105px] z-20"
+            style={{
+              height: footerHeight - 20,
+            }}
+          />
+          <div
+            className="fixed border-l-2 border-blue-1 left-[145px] z-20"
+            style={{
+              height: window.visualViewport.height - footerHeight - 40,
+              top: footerHeight + 40,
+            }}
+          />
+        </div>
+      )}
       <div className="px-9" onClick={setOpen}>
         <img
           className="cursor-pointer"
@@ -79,7 +78,7 @@ const HeaderDropdown = (props) => {
         />
       </div>
       {open && (
-        <div className="absolute left-0 top-[110px] lg:top-[60px] w-screen lg:w-[35vw] lg:h-screen bg-transparent lg:bg-white items-center h-[calc(100vh-130px)] overflow-auto">
+        <div className="absolute left-0 top-[110px] lg:top-[60px] w-screen lg:w-[44vw] lg:h-screen bg-transparent lg:bg-white items-center">
           <div className="lg:px-[72px] py-4">
             <ul className="space-y-2 font-medium bg-white pb-20 px-[10%] lg:px-0">
               {menus.map((value, index) => {
@@ -103,7 +102,9 @@ const HeaderDropdown = (props) => {
               })}
             </ul>
           </div>
-          <div className="lg:px-[100px] lg:pt-0 lg:py-[86px] mt-[-80px] lg:mt-0 bg-transparent lg:bg-white">{renderItem()}</div>
+          <div className="lg:px-[100px] lg:pt-0 lg:py-[86px] mt-[-80px] lg:mt-0 bg-transparent lg:bg-white">
+            {renderItem()}
+          </div>
         </div>
       )}
     </div>

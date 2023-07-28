@@ -6,8 +6,6 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div>
-      asdfasdfasdfasdf
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -15,7 +13,6 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
-    </div>
   );
 }
 

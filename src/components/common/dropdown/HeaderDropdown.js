@@ -1,9 +1,6 @@
 import { useReducer, useState, useLayoutEffect } from "react";
 import NavIcon from "../../../assets/icon/nav.svg";
-import Item1 from "./Item1";
-import Item2 from "./Item2";
-import Item3 from "./Item3";
-import Item4 from "./Item4";
+import Carousel from "./Carousel";
 
 const menus = [
   "Medizinische Beratung",
@@ -13,25 +10,14 @@ const menus = [
 ];
 
 const HeaderDropdown = (props) => {
+  const path = window.location.pathname;
+  const opacity = path === "/about" ? 0.8 : 1;
+
   const [open, setOpen] = useReducer((state) => !state, false);
   const [menu, setMenu] = useState(-1);
   const [footerHeight, setFooterHeight] = useState(0);
   const handleClickMenu = (index) => {
     setMenu(index);
-  };
-  const renderItem = () => {
-    switch (menu) {
-      case 0:
-        return <Item1 />;
-      case 1:
-        return <Item2 />;
-      case 2:
-        return <Item3 />;
-      case 3:
-        return <Item4 />;
-      default:
-        return <></>;
-    }
   };
 
   useLayoutEffect(() => {
@@ -78,17 +64,20 @@ const HeaderDropdown = (props) => {
         />
       </div>
       {open && (
-        <div className="absolute left-0 top-[110px] lg:top-[60px] w-screen lg:w-[44vw] lg:h-screen bg-transparent lg:bg-white items-center">
+        <div
+          className="absolute left-0 top-[110px] lg:top-[60px] w-screen lg:w-[44vw] lg:h-screen bg-transparent lg:bg-white items-center animate-fadeIn lg:animate-fadeInLeft z-[1001]"
+          style={{ opacity: opacity }}
+        >
           <div className="lg:px-[72px] py-4">
             <ul className="space-y-2 font-medium bg-white pb-20 px-[10%] lg:px-0">
               {menus.map((value, index) => {
                 return (
                   <li
                     key={index}
-                    className={`text-xl font-['Poppins'] py-2 lg:py-3 cursor-pointer`}
+                    className={`w-fit text-xl font-['Poppins'] py-2 lg:py-3 cursor-pointer`}
                     onClick={() => handleClickMenu(index)}
                   >
-                    <div
+                    <span
                       className={`pb-1 ${
                         menu === index
                           ? `font-bold text-green-1 border-b-2 border-green-1`
@@ -96,15 +85,17 @@ const HeaderDropdown = (props) => {
                       }`}
                     >
                       {value}
-                    </div>
+                    </span>
                   </li>
                 );
               })}
             </ul>
           </div>
-          <div className="lg:px-[100px] lg:pt-0 lg:py-[86px] mt-[-80px] lg:mt-0 bg-transparent lg:bg-white">
-            {renderItem()}
-          </div>
+          {menu >= 0 && (
+            <div className="lg:px-[100px] lg:pt-0 lg:py-[86px] mt-[-80px] lg:mt-0 bg-transparent lg:bg-white animate-fadeIn lg:animate-fadeIn">
+              <Carousel menu={menu} />
+            </div>
+          )}
         </div>
       )}
     </div>

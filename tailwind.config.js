@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit',
   content: ["./src/**/*.{js,jsx,ts,tsx,html}"],
   theme: {
     extend: {
@@ -19,7 +20,24 @@ module.exports = {
       fontFamily: {
         poppins: "Poppins",
       },
-    }
+      // that is animation class
+      animation: {
+        fadeInLeft: "fadeInLeft 0.5s ease-in-out",
+        fadeIn: "fadeIn 0.5s ease-in-out",
+      },
+      // that is actual animation
+      keyframes: (theme) => ({
+        fadeInLeft: {
+          "0%": { left: -840 },
+          "100%": { left: 0 },
+        },
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 0.8 },
+        }
+      }),
+    },
   },
+  variants: {},
   plugins: [],
 };

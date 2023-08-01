@@ -6,9 +6,7 @@ const Item4 = () => {
       <img
         src={Image}
         alt="footer"
-        width={654}
-        height={597}
-        className="object-cover rounded-tl-[70px] rounded-br-[70px] h-[390px] lg:h-[430px]"
+        className="w-full object-cover rounded-tl-[70px] rounded-br-[70px] h-[390px] lg:h-[430px]"
       />
       <div className="rounded-tl-[70px] rounded-br-[70px] bg-gradient-to-b from-blue-2 to-green-1 absolute w-full h-full top-0 text-white text-xs flex flex-col px-14 pt-[100px]">
         <p className="py-4 text-base font-['Poppins'] font-bold">

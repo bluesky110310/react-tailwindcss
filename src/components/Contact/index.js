@@ -1,3 +1,4 @@
+import { useReducer, useState } from "react";
 import MainLayout from "../../containers/layout/MainLayout";
 import LocationIcon from "../../assets/icon/location.svg";
 import ContactIcon from "../../assets/icon/contact.svg";
@@ -6,8 +7,14 @@ import MapImage from "../../assets/image/map.png";
 import CheckIcon from "../../assets/icon/check.svg";
 
 const Index = () => {
+  const [menu, setMenu] = useState(-1);
+  const [open, setOpen] = useReducer((state) => {
+    setMenu(-1);
+    return !state;
+  }, false);
+
   return (
-    <MainLayout>
+    <MainLayout menu={menu} setMenu={setMenu} open={open} setOpen={setOpen}>
       <div className="w-full pt-14 lg:pt-[181px]">
         <div className="w-full px-[15%] lg:px-0 text-blue-6 text-center text-3xl font-bold">
           Sie haben Fragen oder möchten Termine vereinbaren?

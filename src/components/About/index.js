@@ -1,3 +1,4 @@
+import { useReducer, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import MainLayout from "../../containers/layout/MainLayout";
 import Item1 from "./Item1";
@@ -8,10 +9,15 @@ import Image1 from "../../assets/image/img1.png";
 import Image5 from "../../assets/image/about/img5.png";
 
 const Index = () => {
+  const [menu, setMenu] = useState(-1);
+  const [open, setOpen] = useReducer((state) => {
+    setMenu(-1);
+    return !state;
+  }, false);
   const { ref, inView } = useInView({ threshold: 0 });
 
   return (
-    <MainLayout>
+    <MainLayout menu={menu} setMenu={setMenu} open={open} setOpen={setOpen}>
       <div>
         <div className="w-full relative">
           <img

@@ -12,7 +12,7 @@ const menus = [
 const HeaderDropdown = (props) => {
   const { menu, setMenu, open, setOpen } = props;
   const path = window.location.pathname;
-  const opacity = path === "/about" ? 0.8 : 1;
+  const opacity = path === "/about" || path === "/contact" ? 0.8 : 1;
 
   const [footerHeight, setFooterHeight] = useState(0);
   const handleClickMenu = (index) => {

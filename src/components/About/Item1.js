@@ -11,7 +11,7 @@ const Item1 = () => {
         />
         <div className="rounded-tl-[70px] rounded-br-[70px] bg-gradient-to-b from-blue-2 to-blue-3 absolute w-full h-full top-0 text-white text-xs flex flex-col px-14 pt-[207px] "></div>
       </div>
-      <div className="text-blue-5 text-justify pt-10">
+      <div className="text-blue-5 text-justify pt-10 px-10 lg:px-0">
         Wir überprüfen die bestehende klinische Bewertung und erstellen Analysen
         mit Hilfe von Daten aus den Marktbeobachtungen, übernehmen die Planung
         und auf Wunsch sogar die Umsetzung notwendiger Aktivitäten zur

@@ -23,7 +23,7 @@ const Index = () => {
           <img
             src={Image1}
             alt="default"
-            className="w-full h-[950px] object-cover"
+            className="w-full h-[551px] lg:h-[950px] object-cover"
           />
           <div className="bg-gradient-to-b from-white-op from-0% via-blue-1-op via-20% to-white to-100% absolute w-full h-full top-0"></div>
         </div>
@@ -31,7 +31,7 @@ const Index = () => {
           <div className="w-full text-blue-1 text-center text-3xl font-bold">
             Über uns
           </div>
-          <div className="w-full lg:w-3/6 lg:ml-[25%] text-blue-5 text-center text-lg pt-[53px] lg:pt-[65px] px-10">
+          <div className="w-full lg:w-3/6 lg:ml-[25%] text-blue-5 text-justify lg:text-center text-lg pt-[53px] lg:pt-[65px] px-10">
             Helopha Beratungs GmbH ist eine internationale Dienstleistungs- und
             Beratungsgesellschaft. Wir engagieren uns mit viel Markterfahrung
             und Leidenschaft in Consumer Healthcare und in der Pharmaindustrie.
@@ -85,7 +85,7 @@ const Index = () => {
             <img
               src={Image5}
               alt="default"
-              className="w-full h-full object-fit"
+              className="w-full h-[571px] lg:h-full object-cover lg:object-fit"
             />
           </div>
         </div>

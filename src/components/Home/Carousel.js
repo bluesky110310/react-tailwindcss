@@ -45,7 +45,7 @@ const Carousel = ({ menu, open }) => {
         return (
           <SwiperSlide key={index + 1}>
             <img
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-[725px] lg:h-full"
               src={image}
               alt={`img${index + 1}`}
             />

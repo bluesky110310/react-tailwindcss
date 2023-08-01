@@ -11,7 +11,7 @@ const Item2 = () => {
         />
         <div className="rounded-tl-[70px] rounded-br-[70px] bg-gradient-to-b from-blue-2 to-blue-3 absolute w-full h-full top-0 text-white text-xs flex flex-col px-14 pt-[207px] "></div>
       </div>
-      <div className="text-blue-5 text-justify pt-10">
+      <div className="text-blue-5 text-justify pt-10 px-10 lg:px-0">
         Wir unterstützen die Hersteller, Bevollmächtigten, Importeure und
         Händler bei der effizienten Durchführung von kontrollierte QM-Prozesse.
         Mit unserem Know-how stellen wir die Gesamtprojekte mit Hilfe von

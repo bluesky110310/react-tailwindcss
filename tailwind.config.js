@@ -24,6 +24,9 @@ module.exports = {
       animation: {
         fadeInLeft: "fadeInLeft 0.5s ease-in-out",
         fadeIn: "fadeIn 0.5s ease-in-out",
+        fadeInLg: "fadeInLg 0.5s ease-in-out",
+        fadeInLeftToMiddel: "fadeInLeftToMiddle 0.5s ease-in-out",
+        fadeInRightToMiddle: "fadeInRightToMiddle 0.5s ease-in-out",
       },
       // that is actual animation
       keyframes: (theme) => ({
@@ -34,6 +37,18 @@ module.exports = {
         fadeIn: {
           "0%": { opacity: 0 },
           "100%": { opacity: 0.8 },
+        },
+        fadeInLg: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+        fadeInLeftToMiddle: {
+          "0%": { left: "-50vw" } ,
+          "100%": { left: 0 },
+        },
+        fadeInRightToMiddle: {
+          "0%": { right: "-50vw" } ,
+          "100%": { right: 0 },
         }
       }),
     },

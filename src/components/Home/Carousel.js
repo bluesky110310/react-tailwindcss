@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 // import Swiper core and required modules
 import { Navigation, Pagination } from "swiper/modules";
 // Import Swiper React components
@@ -14,10 +15,25 @@ import Image5 from "../../assets/image/img5.png";
 import Image6 from "../../assets/image/img6.png";
 
 const images = [Image1, Image2, Image3, Image4, Image5, Image6];
+const indexes = [2, 3, 4, 5];
 
-const Carousel = () => {
+const Carousel = ({ menu, open }) => {
+  const [swiper, setSwiper] = useState(null);
+  useEffect(() => {
+    if (swiper) {
+      if (open) {
+        if (menu === -1) {
+          swiper.slideTo(1, 500);
+        } else {
+          swiper.slideTo(indexes[menu], 500);
+        }
+      }
+    }
+  }, [menu, swiper, open]);
+
   return (
     <Swiper
+      onSwiper={setSwiper}
       modules={[Navigation, Pagination]}
       spaceBetween={50}
       slidesPerView={1}

@@ -3,7 +3,8 @@ import LogoIcon from "../../assets/icon/logo.svg";
 import SearchIcon from "../../assets/icon/search.svg";
 import DropwDown from "../../components/common/dropdown/HeaderDropdown";
 
-const Header = ({ showLine }) => {
+const Header = (props) => {
+  const { showLine } = props;
   const path = window.location.pathname;
 
   return (
@@ -12,7 +13,7 @@ const Header = ({ showLine }) => {
         id="logo"
         className="w-full lg:w-[44vw] flex items-center pt-5 lg:pt-0 shrink-0"
       >
-        <DropwDown showLine={showLine} />
+        <DropwDown showLine={showLine} {...props} />
         <div className="lg:ml-14 flex items-center cursor-pointer">
           <Link to="/" className="flex items-center">
             <img src={LogoIcon} alt="Logo icon" width={42} />

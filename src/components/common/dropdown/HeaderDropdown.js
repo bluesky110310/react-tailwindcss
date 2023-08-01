@@ -1,4 +1,4 @@
-import { useReducer, useState, useLayoutEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 import NavIcon from "../../../assets/icon/nav.svg";
 import Carousel from "./Carousel";
 
@@ -10,11 +10,10 @@ const menus = [
 ];
 
 const HeaderDropdown = (props) => {
+  const { menu, setMenu, open, setOpen } = props;
   const path = window.location.pathname;
   const opacity = path === "/about" ? 0.8 : 1;
 
-  const [open, setOpen] = useReducer((state) => !state, false);
-  const [menu, setMenu] = useState(-1);
   const [footerHeight, setFooterHeight] = useState(0);
   const handleClickMenu = (index) => {
     setMenu(index);

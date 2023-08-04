@@ -12,7 +12,7 @@ const menus = [
 const HeaderDropdown = (props) => {
   const { menu, setMenu, open, setOpen } = props;
   const path = window.location.pathname;
-  const opacity = path === "/about" || path === "/contact" ? 0.8 : 1;
+  const opacity = path === "/about" || path === "/contact" ? 1 : 1;
 
   const [footerHeight, setFooterHeight] = useState(0);
   const handleClickMenu = (index) => {
@@ -64,7 +64,7 @@ const HeaderDropdown = (props) => {
       </div>
       {open && (
         <div
-          className="absolute left-0 top-[110px] lg:top-[60px] w-screen lg:w-[44vw] lg:h-screen bg-transparent lg:bg-white items-center animate-fadeIn lg:animate-fadeInLeft z-[1001]"
+          className="absolute left-0 top-[35px] lg:top-[60px] w-screen lg:w-[44vw] lg:h-screen bg-transparent lg:bg-white items-center animate-fadeIn lg:animate-fadeInLeft z-[1001]"
           style={{ opacity: opacity }}
         >
           <div className="lg:px-[72px] py-4">

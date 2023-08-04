@@ -36,7 +36,7 @@ const MainLayout = (props) => {
 
   return (
     <div className="w-full h-full flex flex-col">
-      <Header {...props} />
+      <Header {...props} scrollTop={scrollTop} />
       <div className="mt-[350px] lg:mt-[100px]">{props.children}</div>
       {scrollTop && <ScrollToTop offset={offset} />}
       <Footer />
